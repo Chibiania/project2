@@ -1,4 +1,4 @@
 
 ERD:
 
-![ERD Diagram](pictures/book2adapt.png)
+![ERD Diagram](erd.png)
