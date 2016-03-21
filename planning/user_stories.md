@@ -3,7 +3,7 @@
 ### As a user, I should be able to:
 
 #### Application
--Find my way back to the home page at all times
+- Find my way back to the home page at all times
 - View name of application
 - Click on books so that full list of books appear
 - Click on adaptations so that full list of adaptations appear
@@ -19,41 +19,41 @@
 
 ##### Show
 - View information about book including:
-..* Title
-..* Author
-..* Image
-..* Date of Publication
-..* Description
-..* Adaptations
+* Title
+* Author
+* Image
+* Date of Publication
+* Description
+* Adaptations
 - Click on individual adaptations so that information about adaptation appears
 
-#####Adaptations
+####Adaptations
 
-####Index
+#####Index
 - View full list of adaptations and associated release dates
 - Click on individual adaptations so that information about adaptation appears
 - Click on "add new adaptation" to add a new adaptation
 
-####Show
+#####Show
 - View information about adaptation including:
-..* Title
-..* Date of Release
-..* Image
-..* Comparison to book
-..* Title of book adapted from
+* Title
+* Date of Release
+* Image
+* Comparison to book
+* Title of book adapted from
 - Click on book title so that information about book appears
 - Click on "edit adaptation" to edit the adaptation
 
-####New
+#####New
 - Add a new adaptation with:
-..* Title
-..* Date of Release
-..* Title of book adapted from
+* Title
+* Date of Release
+* Title of book adapted from
 
-... And optional:
-..* Image
-..* Comparison to book
+- With optional:
+* Image
+* Comparison to book
 
-####Edit
+#####Edit
 - Update information about adaptation
 - Click on "delete adaptation" to delete the adaptation
