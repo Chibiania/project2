@@ -1,1 +1,10 @@
 <h1>Book!</h1>
+
+<!-- This goes to adaptation show -->
+<ul>
+  <% @book.adaptations.each do |adaptation| %>
+  <li>
+    <%= link_to "#{adaptation.title} adaptation", adaptation_path(adaptation) %>
+  </li>
+  <% end %>
+</ul>
