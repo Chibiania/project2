@@ -38,7 +38,7 @@
 - View information about adaptation including:
 1. Title
 2. Date of Release
-3. Image
+3. Image 
 4. Comparison to book
 5. Title of book adapted from
 - Click on book title so that information about book appears
