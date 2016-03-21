@@ -19,12 +19,12 @@
 
 ##### Show
 - View information about book including:
-* Title
-* Author
-* Image
-* Date of Publication
-* Description
-* Adaptations
+1. Title
+2. Author
+3. Image
+4. Date of Publication
+5. Description
+6. Adaptations
 - Click on individual adaptations so that information about adaptation appears
 
 ####Adaptations
@@ -36,23 +36,21 @@
 
 #####Show
 - View information about adaptation including:
-* Title
-* Date of Release
-* Image
-* Comparison to book
-* Title of book adapted from
+1. Title
+2. Date of Release
+3. Image
+4. Comparison to book
+5. Title of book adapted from
 - Click on book title so that information about book appears
 - Click on "edit adaptation" to edit the adaptation
 
 #####New
 - Add a new adaptation with:
-* Title
-* Date of Release
-* Title of book adapted from
-
-- With optional:
-* Image
-* Comparison to book
+1. Title
+2. Date of Release
+3. Title of book adapted from
+4. Image (optional)
+5. Comparison to book (optional)
 
 #####Edit
 - Update information about adaptation
