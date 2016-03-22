@@ -9,25 +9,30 @@ class AdaptationsController < ApplicationController
   end
 
   def new
+    redirect_to root_path unless @current_user
     @adaptation = Adaptation.new
   end
 
   def create
+    redirect_to root_path unless @current_user
     @adaptation = Adaptation.create(adaptation_params)
     redirect_to adaptations_path
   end
 
   def edit
+    redirect_to root_path unless @current_user
     @adaptation = Adaptation.find(params[:id])
   end
 
   def update
+    redirect_to root_path unless @current_user
     @adaptation = Adaptation.find(params[:id])
     @adaptation.update(adaptation_params)
     redirect_to adaptation_path
   end
 
   def destroy
+    redirect_to root_path unless @current_user
     @adaptation = Adaptation.find(params[:id])
     @adaptation.destroy
     redirect_to adaptations_path
