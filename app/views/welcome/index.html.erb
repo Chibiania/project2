@@ -1,0 +1,17 @@
+<h2>Welcome!</h2>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <%= link_to "#{book.title} (#{book.date_of_publication})", book_path( book ) %>
+    </li>
+  <% end %>
+</ul>
+
+<ul>
+  <% @adaptations.each do |adaptation| %>
+    <li>
+      <%= link_to "#{adaptation.title} (#{adaptation.date_of_release})", adaptation_path( adaptation ) %>
+    </li>
+  <% end %>
+</ul>
