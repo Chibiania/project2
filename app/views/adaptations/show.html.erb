@@ -1,3 +1,10 @@
 <h1>Adaptation!</h1>
 
-<p> <%= "#{@adaptation.title} adaptation" %> </p>
+<p> <%= link_to "(edit adaptation)", edit_adaptation_path%></p>
+
+<h2> <%= @adaptation.title %> </h2>
+<!-- insert image here -->
+<p> <%= @adaptation.date_of_release%></p>
+<p> <%= @adaptation.comparison_to_book%></p>
+
+<p> Adapted from: <%= link_to @adaptation.book.title, book_path(@adaptation.book_id)%></p>

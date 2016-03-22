@@ -1,11 +1,11 @@
 <h1>Books!</h1>
 
-
+<h2>The Books</h2>
   <!-- This goes to book show page-->
 <ul>
 <% @books.each do |book| %>
   <li>
-    <%= link_to "#{book.title} show", book_path(book) %>
+    <%= link_to "#{book.title} (#{book.author})", book_path(book) %>
   </li>
   <% end %>
 </ul>
@@ -15,7 +15,7 @@
 <ul>
   <% @books.each do |book| %>
   <li>
-    <%= link_to "#{book.title} adaptations", adaptations_path(book) %>
+    <%= link_to book.title, adaptations_path(book) %>
   </li>
   <% end %>
 </ul>
