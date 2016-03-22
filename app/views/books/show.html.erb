@@ -1,10 +1,16 @@
 <h1>Book!</h1>
 
+<h2> <%= @book.title %></h2>
+<p> <%= "#{@book.author}, #{@book.date_of_publication}" %></p>
+<!-- insert image here -->
+<p> <%= @book.description %></p>
+
 <!-- This goes to adaptation show -->
+<h4>Adaptations</h4>
 <ul>
   <% @book.adaptations.each do |adaptation| %>
   <li>
-    <%= link_to "#{adaptation.title} adaptation", adaptation_path(adaptation) %>
+    <%= link_to adaptation.title, adaptation_path(adaptation) %>
   </li>
   <% end %>
 </ul>
