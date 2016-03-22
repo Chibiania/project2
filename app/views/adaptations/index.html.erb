@@ -1,11 +1,13 @@
 <h1>Adaptations!</h1>
 
+<p> <%= link_to "(add new adaptation)", new_adaptation_path %></p>
 
+<h2>The Adaptations</h2>
 <!-- This goes to adaptation show -->
 <ul>
   <% @adaptations.each do |adaptation| %>
     <li>
-      <%= link_to "#{adaptation.title} - #{adaptation.book.title}", adaptation_path( adaptation ) %>
+      <%= link_to "#{adaptation.title} (#{adaptation.date_of_release})", adaptation_path( adaptation ) %>
     </li>
   <% end %>
 </ul>
