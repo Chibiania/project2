@@ -9,7 +9,19 @@
 <body>
 
 <h1>Book2Adapt</h1>
-<nav> <%= link_to "Books", books_path %> <%= link_to "Adaptations", adaptations_path %> <%= link_to "Users", users_path %></nav>
+<nav>
+  <%= link_to "Books", books_path %> <%= link_to "Adaptations", adaptations_path %>
+
+  <% if @current_user %>
+         <%= link_to "Welcome, #{@current_user.username}!", user_path(@current_user) %>
+         <%= link_to "Sign Out", session_path, method: :delete %>
+       <% else %>
+         <%= link_to "Sign Up", new_user_path %>
+         <%= link_to "Sign In", new_session_path %>
+       <% end %>
+
+ <%= link_to "Users", users_path %>
+</nav>
 
 <%= yield %>
 
