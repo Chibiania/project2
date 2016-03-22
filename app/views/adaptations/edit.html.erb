@@ -1,1 +1,25 @@
 <h1>Edit!</h1>
+
+<h2>Edit Adaptation</h2>
+
+  <%= form_for @adaptation, method: :delete do |f| %>
+    <%= f.submit "(delete adaptation)", class: "delete" %>
+  <% end %>
+
+  <%= form_for @adaptation do |f| %>
+    <%= f.label "Title" %>
+    <%= f.text_area :title %>
+
+    <%= f.label "Adapted from" %>
+    <%= f.text_area :book_id %>
+
+    <%= f.label "Date of Release"%>
+    <%= f.text_area :date_of_release%>
+
+    <%= f.label "Comparison to book"%>
+    <%= f.text_area :comparison_to_book%>
+
+    <%= f.label "Image URL"%>
+    <%= f.text_area :image_url%>
+    <%= f.submit %>
+  <% end %>
