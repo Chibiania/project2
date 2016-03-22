@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  root to: "books#index"
+  root to: "welcome#index"
+
   resources :books
   resources :adaptations
-
+  
   resources :users
   resource :session
   # The priority is based upon order of creation: first created -> highest priority.
