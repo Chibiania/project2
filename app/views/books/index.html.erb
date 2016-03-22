@@ -9,13 +9,3 @@
   </li>
   <% end %>
 </ul>
-
-
-<!-- This goes to adaptations index page -->
-<ul>
-  <% @books.each do |book| %>
-  <li>
-    <%= link_to book.title, adaptations_path(book) %>
-  </li>
-  <% end %>
-</ul>
