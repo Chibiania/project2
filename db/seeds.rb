@@ -8,12 +8,32 @@
 Book.destroy_all
 Adaptation.destroy_all
 
-book1 = Book.create(title: "narnia", author: "hammerstien", image_url: "mwah", date_of_publication: "your mum", description: "it's ok")
+book1 = Book.create(title: "Harry Potter and the Sorcerer's Stone", author: "J.K. Rowling", image_url: "mwah", date_of_publication: "your mum", description: "awesomesauce")
 
-adaptation1 = book1.adaptations.create(title: "Narina", date_of_release: "86", image_url: "ugh!", comparison_to_book: "it's aight")
+book2 = Book.create(title: "Harry Potter and the Chamber of Secrets", author: "J.K. Rowling", image_url: "uhhog", date_of_publication: "steeples", description: "niiiiioce!")
 
-adaptation2 = book1.adaptations.create(title: "the prince", date_of_release: "42", image_url: "morg!", comparison_to_book: "it's cool")
+book3= Book.create(title: "Harry Potter and the Prisoner of Azkaban", author: "J.K. Rowling", image_url: "mwah", date_of_publication: "your mum", description: "awesomesauce")
 
-book2 = Book.create(title: "twilight", author: "people_pooper", image_url: "uhhog", date_of_publication: "steeples", description: "niiiiioce!")
+book4 = Book.create(title: "Harry Potter and the Goblet of Fire", author: "J.K. Rowling", image_url: "uhhog", date_of_publication: "steeples", description: "niiiiioce!")
 
-adaptation3 = book2.adaptations.create(title: "breaking farts", date_of_release: "91", image_url: "not again", comparison_to_book: "nope")
+book5= Book.create(title: "Harry Potter and the Order of the Phoenix", author: "J.K. Rowling", image_url: "mwah", date_of_publication: "your mum", description: "awesomesauce")
+
+book6 = Book.create(title: "Harry Potter and the Halfblood Prince", author: "J.K. Rowling", image_url: "uhhog", date_of_publication: "steeples", description: "niiiiioce!")
+
+book7= Book.create(title: "Harry Potter and the Deathly Hallows", author: "J.K. Rowling", image_url: "mwah", date_of_publication: "your mum", description: "awesomesauce")
+
+adaptation1 = book1.adaptations.create(title: "Harry Potter and the Sorcerer's Stone", date_of_release: "1999?", image_url: "ugh!", comparison_to_book: "they're soo cute!")
+
+adaptation2 = book2.adaptations.create(title: "Harry Potter and the Chamber of Secrets", date_of_release: "2001?", image_url: "morg!", comparison_to_book: "it's kinda dark")
+
+adaptation3 = book3.adaptations.create(title: "Harry Potter and the Prisoner of Azkaban", date_of_release: "2002?", image_url: "yup", comparison_to_book: "buckbeak!")
+
+adaptation4 = book4.adaptations.create(title: "Harry Potter and the Goblet of Fire", date_of_release: "2004", image_url: "yup", comparison_to_book: "ferret boy")
+
+adaptation5 = book5.adaptations.create(title: "Harry Potter and the Order of the Phoenix", date_of_release: "2006", image_url: "morg!", comparison_to_book: "it's kinda dark")
+
+adaptation6 = book6.adaptations.create(title: "Harry Potter and the Halfblood Prince", date_of_release: "2008", image_url: "morg!", comparison_to_book: "it's pretty light considering")
+
+adaptation7 = book7.adaptations.create(title: "Harry Potter and the Deathly Hallows Part One", date_of_release: "2010", image_url: "morg!", comparison_to_book: "it's dark")
+
+adaptation8 = book7.adaptations.create(title: "Harry Potter and the Deathly Hallows Part Two", date_of_release: "2011", image_url: "morg!", comparison_to_book: "it's darker still")
