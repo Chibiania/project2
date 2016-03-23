@@ -1,17 +1,47 @@
-<p><%= link_to("(edit book)", edit_book_path) if @current_user %></p>
+<div class="col-xs-12">
 
-<h2> <%= @book.title %></h2>
-<p> <%= "#{@book.author}, #{@book.date_of_publication}" %></p>
-<!-- insert image here -->
-<p> <%= @book.description %></p>
+  <div class="col-xs-2 pull-right">
+    <p class="pull-right">
+      <%= link_to("(edit book)", edit_book_path) if @current_user %>
+    </p>
+  </div>
 
-<!-- This goes to adaptation show -->
-<h4>Adaptations</h4>
-<p> <%= link_to("(add new adaptation)", new_book_adaptation_path(@book)) if @current_user %></p>
-<ul>
-  <% @book.adaptations.each do |adaptation| %>
-  <li>
-    <%= link_to adaptation.title, adaptation %>
-  </li>
-  <% end %>
-</ul>
+  <div class="col-xs-10">
+    <h2> <%= @book.title %></h2>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-xs-8 text-center">
+    <table class="table table-hover">
+      <tr>
+        <td>
+          <%= "#{@book.author}, #{@book.date_of_publication}" %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= @book.description %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h4 class="text-left">Adaptations</h4>
+          <% @book.adaptations.each do |adaptation| %>
+          <p class="text-left">
+            <%= link_to adaptation.title, adaptation %>
+          </p>
+          <p class="text-left">
+            <%= link_to("(add new adaptation)", new_book_adaptation_path(@book)) if @current_user %>
+          </p>
+        </td>
+        <% end %>
+      </tr>
+    </table>
+  </div>
+  <div class="col-xs-4 pull-right">
+    <p>The PIC goes here!</p>
+  </div>
+
+</div>

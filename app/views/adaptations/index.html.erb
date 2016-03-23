@@ -1,9 +1,21 @@
-<h2>The Adaptations</h2>
-<!-- This goes to adaptation show -->
-<ul>
-  <% @adaptations.each do |adaptation| %>
-    <li>
-      <%= link_to "#{adaptation.title} (#{adaptation.date_of_release})", adaptation_path( adaptation ) %>
-    </li>
-  <% end %>
-</ul>
+<div class="col-xs-12">
+
+  <div class="col-xs-6">
+    <h2>The Adaptations</h2>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-xs-8 col-centered text-center">
+    <table class="table table-hover">
+      <% @adaptations.each do |adaptation| %>
+      <tr>
+        <td>
+          <%= link_to "#{adaptation.title} (#{adaptation.date_of_release})", adaptation_path( adaptation ) %>
+        </td>
+        <% end %>
+      </tr>
+    </table>
+  </div>
+</div>
