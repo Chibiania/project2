@@ -7,10 +7,11 @@
 
 <!-- This goes to adaptation show -->
 <h4>Adaptations</h4>
+<p> <%= link_to("(add new adaptation)", new_book_adaptation_path(@book)) if @current_user %></p>
 <ul>
   <% @book.adaptations.each do |adaptation| %>
   <li>
-    <%= link_to adaptation.title, adaptation_path(adaptation) %>
+    <%= link_to adaptation.title, adaptation %>
   </li>
   <% end %>
 </ul>
