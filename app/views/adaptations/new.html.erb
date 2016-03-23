@@ -1,18 +1,36 @@
 <h2>Add New Adaptation</h2>
 
-<%= form_for [@book, @adaptation] do |f| %>
-  <%= f.label "Title" %>
-  <%= f.text_area :title %>
+<%= form_for [@book, @adaptation], :html => {:class => "form-horizontal center"} do |f| %>
+     <div class="form-group">
+       <%= f.label :title, "Title:", class: "col-md-4 control-label" %>
+       <div class="col-md-8">
+         <%= f.text_field :title, class: "form-control" %>
+       </div>
+     </div>
 
-  <%= f.hidden_field :book_id, :value => @book.id %>
+     <%= f.hidden_field :book_id, :value => @book.id %>
 
-  <%= f.label "Date of Release"%>
-  <%= f.text_area :date_of_release%>
 
-  <%= f.label "Comparison to book"%>
-  <%= f.select :comparison_to_book, [["..why did they think this was a good idea"], ["it didn't do the book justice"], ["not good but not bad either"], ["it was good"], ["THIS...IS...AWESOME!!!!!"]] %>
+     <div class="form-group">
+       <%= f.label :date_of_release, "Date of Publication:", class: "col-md-4 control-label" %>
+       <div class="col-md-8">
+         <%= f.text_field :date_of_release, class: "form-control" %>
+       </div>
+     </div>
 
-  <%= f.label "Image URL"%>
-  <%= f.text_area :image_url%>
-  <%= f.submit %>
+     <div class="form-group">
+       <%= f.label :comparison_to_book, "Comparison to Book:", class: "col-md-4 control-label" %>
+       <div class="col-md-8">
+           <%= f.select :comparison_to_book, [["..why did they think this was a good idea"], ["it didn't do the book justice"], ["not good but not bad either"], ["it was good"], ["THIS...IS...AWESOME!!!!!"]], class: "form-control" %>
+       </div>
+     </div>
+
+     <div class="form-group">
+       <%= f.label :image_url, "Image URL:", class: "col-md-4 control-label" %>
+       <div class="col-md-8">
+         <%= f.text_field :image_url, class: "form-control" %>
+       </div>
+     </div>
+
+     <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
 <% end %>

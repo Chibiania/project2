@@ -32,11 +32,11 @@
           <p class="text-left">
             <%= link_to adaptation.title, adaptation %>
           </p>
+          <% end %>
           <p class="text-left">
             <%= link_to("(add new adaptation)", new_book_adaptation_path(@book)) if @current_user %>
           </p>
         </td>
-        <% end %>
       </tr>
     </table>
   </div>

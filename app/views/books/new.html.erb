@@ -1,20 +1,40 @@
 <h2>Add New Book</h2>
 
-<%= form_for @book do |f| %>
-  <%= f.label "Title" %>
-  <%= f.text_area :title %>
+<%= form_for @book, :html => {:class => "form-horizontal center"} do |f| %>
+     <div class="form-group">
+       <%= f.label :title, "Title:", class: "col-md-4 control-label" %>
+       <div class="col-md-8">
+         <%= f.text_field :title, class: "form-control" %>
+       </div>
+     </div>
 
-  <%= f.label "Author" %>
-  <%= f.text_area :author %>
+     <div class="form-group">
+       <%= f.label :author, "Author:", class: "col-md-4 control-label" %>
+       <div class="col-md-8">
+         <%= f.text_field :author, class: "form-control" %>
+       </div>
+     </div>
 
-  <%= f.label "Date of Publication" %>
-  <%= f.text_area :date_of_publication %>
+     <div class="form-group">
+       <%= f.label :date_of_publication, "Date of Publication:", class: "col-md-4 control-label" %>
+       <div class="col-md-8">
+         <%= f.text_field :date_of_publication, class: "form-control" %>
+       </div>
+     </div>
 
-  <%= f.label "Description" %>
-  <%= f.text_area :description %>
+     <div class="form-group">
+       <%= f.label :description, "Description:", class: "col-md-4 control-label" %>
+       <div class="col-md-8">
+         <%= f.text_field :description, class: "form-control" %>
+       </div>
+     </div>
 
-  <%= f.label "Image URL"%>
-  <%= f.text_area :image_url %>
+     <div class="form-group">
+       <%= f.label :image_url, "Image URL:", class: "col-md-4 control-label" %>
+       <div class="col-md-8">
+         <%= f.text_field :image_url, class: "form-control" %>
+       </div>
+     </div>
 
-  <%= f.submit %>
+     <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
 <% end %>
