@@ -47,9 +47,9 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-4">
+      <div class="col-xs-12 text-center">
         <% flash.each do |type, message| %>
-        <p class="<%= type %>"> <%= message %> </p>
+        <h4 class="<%= type %>"> <%= message %> </h4>
         <% end %>
       </div>
     </div>
@@ -59,10 +59,13 @@
     <div class="row">
       <div class="col-xs-12 text-center footer navbar-fixed-bottom">
         <footer>
-          <p> Made by Toni Langley
-            <a href=#>portfolio</a>
-            <a href=#>linked in pic</a></p>
-            <p> This project's repo: <a href=#>Github Pic</a></p>
+          <p>
+
+            <a href="https://www.linkedin.com/in/tlangley"><%= image_tag("Linkedin.png", class: "img", :alt => "Linked In Logo")%></a>
+
+             Made by <a href="https://chibiania.github.io/"> Toni Langley</a>
+
+            <a href="https://github.com/Chibiania/project2"><%= image_tag("github.png", class: "img", :alt => "it's a pic!")%></a></p>
           </footer>
         </div>
       </div>

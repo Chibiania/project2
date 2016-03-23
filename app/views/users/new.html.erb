@@ -1,12 +1,23 @@
-<h2>Sign Up</h2>
+<div class="move_down">
 
-<%= form_for @user do |f| %>
+<h2 class="move_up">Sign Up</h2>
 
-  <%= f.label :username %>
-  <%= f.text_field :username %>
+<%= form_for @user, :html => {:class => "form-horizontal center"} do |f| %>
+     <div class="form-group">
+       <%= f.label :username, "Username:", class: "col-xs-4 control-label" %>
+       <div class="col-xs-6">
+         <%= f.text_field :username, class: "form-control" %>
+       </div>
+     </div>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+     <div class="form-group">
+       <%= f.label :password, "Password:", class: "col-xs-4 control-label" %>
+       <div class="col-xs-6">
+         <%= f.text_field :password, class: "form-control" %>
+       </div>
+     </div>
 
-  <%= f.submit %>
+     <%= f.submit "Submit", class: "btn btn-default btn-primary pull-right move_left" %>
 <% end %>
+
+</div>
