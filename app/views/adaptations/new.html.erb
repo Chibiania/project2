@@ -1,11 +1,10 @@
 <h2>Add New Adaptation</h2>
 
-<%= form_for @adaptation do |f| %>
+<%= form_for [@book, @adaptation] do |f| %>
   <%= f.label "Title" %>
   <%= f.text_area :title %>
 
-  <%= f.label "Adapted from" %>
-  <%= f.text_area :book_id %>
+  <%= f.hidden_field :book_id, :value => @book.id %>
 
   <%= f.label "Date of Release"%>
   <%= f.text_area :date_of_release%>
