@@ -1,38 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Book2adapt</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
+
+  <head>
+    <title>Book2adapt</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
 <body>
+  <div id="main-container" class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <h1><%= link_to "Book2Adapt", root_path %></h1>
+      </div>
 
-<h1><%= link_to "Book2Adapt", root_path %></h1>
-<nav>
-  <%= link_to "Books", books_path %> <%= link_to "Adaptations", adaptations_path %>
+      <div class="col-xs-6">
+        <nav class="navbar navbar-default centered-pills" role="navigation">
+          <ul class="nav nav-pills" role="tablist">
+            <li class="active">
+              <%= link_to "Books", books_path %>
+            </li>
+            <li class="active">
+              <%= link_to "Adaptations", adaptations_path %>
+            </li>
+          </ul>
+          <ul class="nav nav-pills">
+            <% if @current_user %>
+            <li>
+              <%= link_to "Welcome, #{@current_user.username}!", user_path(@current_user) %>
+            </li>
+            <li>
+              <%= link_to "Sign Out", session_path, method: :delete %>
+            </li>
+            <% else %>
+            <li>
+              <%= link_to "Sign Up", new_user_path %>
+            </li>
+            <li>
+              <%= link_to "Sign In", new_session_path %>
+            </li>
+            <% end %>
 
-  <% if @current_user %>
-         <%= link_to "Welcome, #{@current_user.username}!", user_path(@current_user) %>
-         <%= link_to "Sign Out", session_path, method: :delete %>
-       <% else %>
-         <%= link_to "Sign Up", new_user_path %>
-         <%= link_to "Sign In", new_session_path %>
-       <% end %>
-</nav>
-
-<% flash.each do |type, message| %>
-  <p class="<%= type %>"> <%= message %> </p>
-<% end %>
-
-<%= yield %>
-
-<footer>
-  <p> Made by Toni Langley
-    <a href=#>portfolio</a>
-    <a href=#>linked in pic</a></p>
-    <p> This project's repo: <a href=#>Github Pic</a></p>
-</footer>
-
-</body>
+        </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <% flash.each do |type, message| %>
+        <p class="<%= type %>"> <%= message %> </p>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <%= yield %>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <footer>
+          <p> Made by Toni Langley
+            <a href=#>portfolio</a>
+            <a href=#>linked in pic</a></p>
+            <p> This project's repo: <a href=#>Github Pic</a></p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
