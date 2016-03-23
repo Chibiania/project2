@@ -10,7 +10,7 @@
   <%= f.text_area :date_of_release%>
 
   <%= f.label "Comparison to book"%>
-  <%= f.text_area :comparison_to_book%>
+  <%= f.select :comparison_to_book, [["..why did they think this was a good idea"], ["it didn't do the book justice"], ["not good but not bad either"], ["it was good"], ["THIS...IS...AWESOME!!!!!"]] %>
 
   <%= f.label "Image URL"%>
   <%= f.text_area :image_url%>
