@@ -1,1 +1,21 @@
-<h2><%= @user.username %> <%= link_to("(edit)", edit_user_path(@user)) if @current_user == @user %></h2>
+<h2><%= @user.username %></h2>
+<p> <%= link_to("(edit)", edit_user_path(@user)) if @current_user == @user %> </p>
+
+<p> My additions: </p>
+<p>Books</p>
+<ul>
+<% @user.books.each do |book| %>
+  <li>
+    <%= link_to "#{book.title} (#{book.author})", book_path(book) %>
+  </li>
+  <% end %>
+</ul>
+
+<p>Adaptations</p>
+<ul>
+  <% @user.adaptations.each do |adaptation| %>
+    <li>
+      <%= link_to "#{adaptation.title} (#{adaptation.date_of_release})", adaptation_path( adaptation ) %>
+    </li>
+  <% end %>
+</ul>
