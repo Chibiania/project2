@@ -15,7 +15,7 @@ class BooksController < ApplicationController
 
   def create
     redirect_to root_path unless @current_user
-    @book = Book.create(book_params)
+    @book = @current_user.books.create!(book_params)
     redirect_to books_path
   end
 
