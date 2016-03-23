@@ -10,13 +10,17 @@ class AdaptationsController < ApplicationController
 
   def new
     redirect_to root_path unless @current_user
-    @adaptation = Adaptation.new
+    @book = Book.find(params[:book_id])
+    @adaptation = @book.adaptations.new
   end
 
   def create
     redirect_to root_path unless @current_user
-    @adaptation = Adaptation.create(adaptation_params)
-    redirect_to adaptations_path
+    @book = Book.find(params[:book_id])
+    @adaptation = @book.adaptations.new(adaptation_params)
+    @adaptation.user = @current_user
+    @adaptation.save
+    redirect_to @adaptation
   end
 
   def edit
