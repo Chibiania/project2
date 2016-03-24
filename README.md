@@ -32,4 +32,4 @@
 - go to [Book2Adapt](https://book2adapt.herokuapp.com/) to view application or go to the [github repo] (https://github.com/Chibiania/project2) to look at the code
 
 #### Unsolved problems
-- can't get the date of release for adaptation to change to white
+- can't get the default text color for date of release on adaptation show page to change to white
