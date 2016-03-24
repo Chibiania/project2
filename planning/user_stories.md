@@ -40,8 +40,8 @@
   - Image
   - Comparison to book
   - Title of book adapted from
-  - Click on book title so that information about book appears
-  - Click on "edit adaptation" to edit the adaptation
+- Click on book title so that information about book appears
+- Click on "edit adaptation" to edit the adaptation
 
 #####New
 - Add a new adaptation with:
