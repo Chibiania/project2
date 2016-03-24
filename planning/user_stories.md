@@ -48,8 +48,8 @@
   - Title
   - Date of Release
   - Title of book adapted from
-  - Image (optional)
-  - Comparison to book (optional)
+  - Image
+  - Comparison to book
 
 #####Edit
 - Update information about adaptation
