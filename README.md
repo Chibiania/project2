@@ -14,7 +14,8 @@
 
 #### The approach taken
 ##### Bronze
-- everything in the user stories
+- everything in the [user stories](https://github.com/Chibiania/project2/blob/master/planning/user_stories.md)
+
 
 ##### Silver
 - have edit fields auto-filled with current data
