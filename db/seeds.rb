@@ -16,6 +16,8 @@ book3= Book.create(title: "The Little Mermaid", author: "Hans Christian Andersen
 
 book4 = Book.create(title: "A Game of Thrones", author: "George R. R. Martin", image_url: "gotbook.jpeg", date_of_publication: "1996", description: "Several noble houses fight a civil war over who should be king, while an exiled princess tries to find her place in the world, and the kingdom is threatened by some rising supernatural threat in the north.")
 
+book5= Book.create(title: "Romeo and Juliet", author: "William Shakespeare", image_url: "rjorig.jpg", date_of_publication: "1597", description: "The story of two young star-crossed lovers whose deaths ultimately reconcile their feuding families.")
+
 adaptation1 = book1.adaptations.create(title: "Harry Potter and the Deathly Hallows Part One", date_of_release: "2010", image_url: "hp7p1.jpg", comparison_to_book: "THIS...IS...AWESOME!!!!!")
 
 adaptation2 = book1.adaptations.create(title: "Harry Potter and the Deathly Hallows Part Two", date_of_release: "2011", image_url: "hp7p2.jpg", comparison_to_book: "THIS...IS...AWESOME!!!!!")
@@ -29,3 +31,7 @@ adaptation5 = book3.adaptations.create(title: "Hans Christian Andersen's The Lit
 adaptation6 = book3.adaptations.create(title: "The Little Mermaid", date_of_release: "1989", image_url: "tlm89.jpg", comparison_to_book: "not good but not bad either")
 
 adaptation7 = book4.adaptations.create(title: "Game of Thrones (season 1)", date_of_release: "2011", image_url: "gotned.jpg", comparison_to_book: "THIS...IS...AWESOME!!!!!")
+
+adaptation8 = book5.adaptations.create(title: "Romeo X Juliet", date_of_release: "2007", image_url: "rxj.jpg", comparison_to_book: "not good but not bad either")
+
+adaptation9 = book5.adaptations.create(title: "The Lion King II: Simba's Pride", date_of_release: "1998", image_url: "rjsimba.jpg", comparison_to_book: "it was good")
