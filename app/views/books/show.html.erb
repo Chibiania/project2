@@ -1,54 +1,52 @@
-<div class="move_down">
+<div class="move_down white-text">
 
-<div class="col-xs-12 move_up">
+  <div class="col-xs-12 move_up">
 
-  <div class="col-xs-2 pull-right">
-    <p class="pull-right">
-      <%= link_to("(edit book)", edit_book_path) if @current_user %>
-    </p>
-  </div>
-
-  <div class="col-xs-10">
-    <h2> <%= @book.title %></h2>
-  </div>
-</div>
-
-<div class="row">
-
-  <div class="col-xs-8 text-center move_down_more">
-    <table class="table table-hover">
-      <tr>
-        <td>
-          <p class="move_down_more">
-            <%= "#{@book.author}, #{@book.date_of_publication}" %>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p class="move_down_more">
-          <%= @book.description %>
+    <div class="col-xs-12">
+      <h2> <%= @book.title %>
+        <p class="inline small yellow-text">
+          <%= link_to("(edit book)", edit_book_path) if @current_user %>
         </p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h4 class="text-left">Adaptations</h4>
-          <% @book.adaptations.each do |adaptation| %>
-          <p class="text-left">
-            <%= link_to adaptation.title, adaptation %>
-          </p>
-          <% end %>
-          <p class="text-left">
-            <%= link_to("(add new adaptation)", new_book_adaptation_path(@book)) if @current_user %>
-          </p>
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="col-xs-4 pull-right">
-    <p> <%= image_tag("me.jpg", class: "img-responsive", :alt => "it's a pic!")%> </p>
+      </h2>
+    </div>
   </div>
 
-</div>
+  <div class="row">
+
+    <div class="col-xs-8 text-center move_down_more">
+      <table class="table">
+        <tr>
+          <td>
+            <p class="move_down_more">
+              <%= "#{@book.author}, #{@book.date_of_publication}" %>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="move_down_more">
+              <%= @book.description %>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h4 class="text-left">Adaptations</h4>
+            <% @book.adaptations.each do |adaptation| %>
+            <p class="text-left">
+              <%= link_to adaptation.title, adaptation %>
+            </p>
+            <% end %>
+            <p class="text-left">
+              <%= link_to("(add new adaptation)", new_book_adaptation_path(@book)) if @current_user %>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-xs-4 pull-right">
+      <p> <%= image_tag("me.jpg", class: "img-responsive", :alt => "it's a pic!")%> </p>
+    </div>
+
+  </div>
 </div>

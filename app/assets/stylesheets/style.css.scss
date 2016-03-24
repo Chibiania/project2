@@ -8,6 +8,29 @@
   display:inline;
 }
 
+nav a{
+  border: solid tan 2px;
+  border-radius: 5px;
+  background-color: white;
+  color: tan;
+}
+.highlight a{
+  border: solid pink 2px;
+  border-radius: 5px;
+  background-color: white;
+  color:pink;
+}
+a:hover, .yellow-text a:hover{
+  padding: 2%;
+  color: rgb(231, 202, 241);
+  background-color: lightyellow;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.no-uppercase a:hover{
+  text-transform: none;
+}
 .col-centered{
   float: none;
   margin: 0 auto;
@@ -21,10 +44,39 @@ html, body, .container{
   height: 100%;
 }
 
+body{
+  background-color: rgb(215, 230, 232);
+}
+h1{
+  padding: 5%;
+  border: solid white 5px;
+  border-radius: 25% 5%;
+  background-color: lightyellow;
+  text-align: center;
+}
+h1 a{
+  color: tan;
+}
+.white-text{
+  color: white;
+}
+.yellow-text a{
+  color: lightyellow;
+}
+
+td a{
+  color: white;
+}
+h2{
+  color: white;
+}
+
 .move_down{
-  margin-top:5%;
-  padding: 10% 5%;
+  margin-top: 5%;
+  padding: 5%;
   background-color: pink;
+  border: solid white 5px;
+  border-radius: 5% 25%;
 }
 
 .move_down_more{
@@ -42,6 +94,22 @@ html, body, .container{
   margin-left: 10%;
 }
 
+.alert{
+  color: red;
+}
+
+.notice{
+  color: blue;
+}
 footer{
-  background-color: red;
+  margin: 1%;
+  border: solid white 5px;
+  border-radius: 25% 5%;
+  background-color: lightyellow;
+  color: tan;
+  text-align: center;
+}
+footer a{
+  color: tan;
+  font-weight: bold;
 }

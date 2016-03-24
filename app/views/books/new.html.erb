@@ -1,38 +1,38 @@
 <div class="move_down">
 
-<h2 class="move_up">Add New Book</h2>
+<h2>Add New Book</h2>
 
 <%= form_for @book, :html => {:class => "form-horizontal center"} do |f| %>
      <div class="form-group">
-       <%= f.label :title, "Title:", class: "col-xs-4 control-label" %>
+       <%= f.label :title, "Title:", class: "col-xs-4 control-label white-text" %>
        <div class="col-xs-6">
          <%= f.text_field :title, class: "form-control" %>
        </div>
      </div>
 
      <div class="form-group">
-       <%= f.label :author, "Author:", class: "col-xs-4 control-label" %>
+       <%= f.label :author, "Author:", class: "col-xs-4 control-label white-text" %>
        <div class="col-xs-6">
          <%= f.text_field :author, class: "form-control" %>
        </div>
      </div>
 
      <div class="form-group">
-       <%= f.label :date_of_publication, "Date of Publication:", class: "col-xs-4 control-label" %>
+       <%= f.label :date_of_publication, "Date of Publication:", class: "col-xs-4 control-label white-text" %>
        <div class="col-xs-6">
          <%= f.text_field :date_of_publication, class: "form-control" %>
        </div>
      </div>
 
      <div class="form-group">
-       <%= f.label :description, "Description:", class: "col-xs-4 control-label" %>
+       <%= f.label :description, "Description:", class: "col-xs-4 control-label white-text" %>
        <div class="col-xs-6">
          <%= f.text_field :description, class: "form-control" %>
        </div>
      </div>
 
      <div class="form-group">
-       <%= f.label :image_url, "Image URL:", class: "col-xs-4 control-label" %>
+       <%= f.label :image_url, "Image URL:", class: "col-xs-4 control-label white-text" %>
        <div class="col-xs-6">
          <%= f.text_field :image_url, class: "form-control" %>
        </div>

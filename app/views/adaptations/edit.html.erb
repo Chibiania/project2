@@ -1,43 +1,50 @@
 <div class="move_down">
-  <h2 class="move_up">Edit Adaptation</h2>
+  <h2>Edit Adaptation</h2>
 
-  <%= form_for [@book, @adaptation], :html => {:class => "form-horizontal center"} do |f| %>
-       <div class="form-group">
-         <%= f.label :title, "Title:", class: "col-xs-4 control-label" %>
-         <div class="col-xs-6">
-           <%= f.text_field :title, class: "form-control" %>
-         </div>
-       </div>
+  <div class="row">
+    <div class="col-xs-12">
 
-       <div class="form-group">
-         <%= f.label :date_of_release, "Date of Publication:", class: "col-xs-4 control-label" %>
-         <div class="col-xs-6">
-           <%= f.text_field :date_of_release, class: "form-control" %>
-         </div>
-       </div>
+      <%= form_for [@book, @adaptation], :html => {:class => "form-horizontal center"} do |f| %>
+      <fieldset>
 
-       <div class="form-group">
-         <%= f.label :comparison_to_book, "Comparison to Book:", class: "col-xs-4 control-label" %>
-         <div class="col-xs-6">
-             <%= f.select :comparison_to_book, [["..why did they think this was a good idea"], ["it didn't do the book justice"], ["not good but not bad either"], ["it was good"], ["THIS...IS...AWESOME!!!!!"]], class: "form-control" %>
-         </div>
-       </div>
+        <div class="form-group">
+          <%= f.label :title, "Title:", class: "col-xs-4 control-label white-text" %>
+          <div class="col-xs-6">
+            <%= f.text_field :title, class: "form-control" %>
+          </div>
+        </div>
 
-       <div class="form-group">
-         <%= f.label :image_url, "Image URL:", class: "col-xs-4 control-label" %>
-         <div class="col-xs-6">
-           <%= f.text_field :image_url, class: "form-control" %>
-         </div>
-       </div>
-       
-       <div class="pull-right move_left">
+        <div class="form-group">
+          <%= f.label :date_of_release, "Date of Publication:", class: "col-xs-4 control-label white-text" %>
+          <div class="col-xs-6">
+            <%= f.text_field :date_of_release, class: "form-control" %>
+          </div>
+        </div>
 
-         <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
-         <% end %>
+        <div class="form-group">
+          <%= f.label :comparison_to_book, "Comparison to Book:", class: "col-xs-4 control-label white-text" %>
+          <div class="col-xs-6">
+            <%= f.select :comparison_to_book, [["..why did they think this was a good idea"], ["it didn't do the book justice"], ["not good but not bad either"], ["it was good"], ["THIS...IS...AWESOME!!!!!"]], class: "form-control" %>
+          </div>
+        </div>
 
-         <%= form_for @adaptation, method: :delete do |f| %>
-           <%= f.submit "Delete adaptation", class: "delete btn btn-danger" %>
-         <% end %>
-       </div>
+        <div class="form-group">
+          <%= f.label :image_url, "Image URL:", class: "col-xs-4 control-label white-text" %>
+          <div class="col-xs-6">
+            <%= f.text_field :image_url, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <%= f.submit "Submit", class: "btn btn-default btn-primary pull-right move_left" %>
+        </div>
+      </fieldset>
+      <% end %>
+    </div>
+  </div>
+
+  <%= form_for @adaptation, method: :delete do |f| %>
+  <%= f.submit "Delete adaptation", class: "delete btn btn-danger pull-right move_left" %>
+  <% end %>
 
 </div>

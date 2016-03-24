@@ -1,50 +1,57 @@
 <div class="move_down">
-  <h2 class="move_up">Edit Book</h2>
+  <h2>Edit Book</h2>
 
-<%= form_for @book, :html => {:class => "form-horizontal center"} do |f| %>
-     <div class="form-group">
-       <%= f.label :title, "Title:", class: "col-xs-4 control-label" %>
-       <div class="col-xs-6">
-         <%= f.text_field :title, class: "form-control" %>
-       </div>
-     </div>
+  <div class="row">
+    <div class="col-xs-12">
 
-     <div class="form-group">
-       <%= f.label :author, "Author:", class: "col-xs-4 control-label" %>
-       <div class="col-xs-6">
-         <%= f.text_field :author, class: "form-control" %>
-       </div>
-     </div>
+      <%= form_for @book, :html => {:class => "form-horizontal center"} do |f| %>
+      <fieldset>
 
-     <div class="form-group">
-       <%= f.label :date_of_publication, "Date of Publication:", class: "col-xs-4 control-label" %>
-       <div class="col-xs-6">
-         <%= f.text_field :date_of_publication, class: "form-control" %>
-       </div>
-     </div>
+        <div class="form-group">
+          <%= f.label :title, "Title:", class: "col-xs-4 control-label white-text" %>
+          <div class="col-xs-6">
+            <%= f.text_field :title, class: "form-control" %>
+          </div>
+        </div>
 
-     <div class="form-group">
-       <%= f.label :description, "Description:", class: "col-xs-4 control-label" %>
-       <div class="col-xs-6">
-         <%= f.text_field :description, class: "form-control" %>
-       </div>
-     </div>
+        <div class="form-group">
+          <%= f.label :author, "Author:", class: "col-xs-4 control-label white-text" %>
+          <div class="col-xs-6">
+            <%= f.text_field :author, class: "form-control" %>
+          </div>
+        </div>
 
-     <div class="form-group">
-       <%= f.label :image_url, "Image URL:", class: "col-xs-4 control-label" %>
-       <div class="col-xs-6">
-         <%= f.text_field :image_url, class: "form-control" %>
-       </div>
-     </div>
+        <div class="form-group">
+          <%= f.label :date_of_publication, "Date of Publication:", class: "col-xs-4 control-label white-text" %>
+          <div class="col-xs-6">
+            <%= f.text_field :date_of_publication, class: "form-control" %>
+          </div>
+        </div>
 
-     <div class="pull-right move_left">
+        <div class="form-group">
+          <%= f.label :description, "Description:", class: "col-xs-4 control-label white-text" %>
+          <div class="col-xs-6">
+            <%= f.text_field :description, class: "form-control" %>
+          </div>
+        </div>
 
-       <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
-       <% end %>
+        <div class="form-group">
+          <%= f.label :image_url, "Image URL:", class: "col-xs-4 control-label white-text" %>
+          <div class="col-xs-6">
+            <%= f.text_field :image_url, class: "form-control" %>
+          </div>
+        </div>
 
-       <%= form_for @book, method: :delete do |f| %>
-       <%= f.submit "Delete book", class: "delete btn btn-danger" %>
-       <% end %>
-     </div>
-     
+        <div class="form-actions">
+          <%= f.submit "Submit", class: "btn btn-default btn-primary pull-right move_left" %>
+        </div>
+      </fieldset>
+      <% end %>
+    </div>
+  </div>
+
+  <%= form_for @book, method: :delete do |f| %>
+  <%= f.submit "Delete book", class: "delete btn btn-danger pull-right move_left" %>
+  <% end %>
+
 </div>
