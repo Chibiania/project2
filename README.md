@@ -14,18 +14,18 @@
 
 #### The approach taken
 ##### Bronze
-- everything in the [user stories](https://github.com/Chibiania/project2/blob/master/planning/user_stories.md)
+- See [User Stories](https://github.com/Chibiania/project2/blob/master/planning/user_stories.md)
 
 
 ##### Silver
-- have edit fields auto-filled with current data
-- home/landing page using welcome controller
-- adding user sign in capabilities
-- have users able to add and edit books
+- Have edit fields auto-filled with current data
+- Home/landing page using welcome controller
+- Adding user sign in capabilities
+- Have users able to add and edit books
 
 ##### Gold
-- nest only the edit and new routes for adaptations so when book information is being entered, it is for a specific books
-- users show page has all the additions made by that particular user
+- Nest only the edit and new routes for adaptations so when book information is being entered, it is for a specific books
+- Users show page has all the additions made by that particular user
 
 
 #### Installation instructions
@@ -41,4 +41,4 @@
 
 
 #### Unsolved problems
-- can't get the default text color for date of release on adaptation show page to change to white
+- The default text color for date of release on adaptation show page refuses to be white
