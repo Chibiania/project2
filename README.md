@@ -29,7 +29,16 @@
 
 
 #### Installation instructions
-- go to [Book2Adapt](https://book2adapt.herokuapp.com/) to view application or go to the [github repo] (https://github.com/Chibiania/project2) to look at the code
+#####Deployed App
+[Book2Adapt](https://book2adapt.herokuapp.com/)
+
+#####Viewing the Code
+- Clone repo
+- Run bundle install
+- Run rake db:drop db:create db:migrate db:seed
+- Run rails s
+- Go to localhost:3000 in the browser
+
 
 #### Unsolved problems
 - can't get the default text color for date of release on adaptation show page to change to white
