@@ -6,7 +6,7 @@
 
 <%= form_for [@book, @adaptation], :html => {:class => "form-horizontal center"} do |f| %>
 <fieldset>
-
+<!-- Since your forms are so similar, it wouldn't be a bad idea to put this form in a reusable partial view. -->
      <div class="form-group">
        <%= f.label :title, "Title:", class: "col-xs-4 control-label white-text" %>
        <div class="col-xs-6">
@@ -15,12 +15,18 @@
      </div>
 
      <%= f.hidden_field :book_id, :value => @book.id %>
+     <!-- If you're using nested routes, this isn't necessary. In your controller, use:
 
+     @book = Book.find(params[:book_id])
+     @book.adaptations.create(adaptation_params)
+
+     It'll figure out the book ID for you, and is much more secure than relying on something in your HTML which any user could change using "inspect element"-->
 
      <div class="form-group">
        <%= f.label :date_of_release, "Date of Publication:", class: "col-xs-4 control-label white-text" %>
        <div class="col-xs-6">
          <%= f.text_field :date_of_release, class: "form-control" %>
+         <!-- Take a look at Rails' date fields for forms -->
        </div>
      </div>
 
